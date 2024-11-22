@@ -1,4 +1,3 @@
-```markdown
 # .dotfiles
 i use mac btw
 
@@ -22,4 +21,3 @@ its that easy
 
 ## credit
 big thanks to stow
-```

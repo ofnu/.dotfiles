@@ -10,8 +10,8 @@ syntax on
 " Enable automatic filetype detection
 filetype on
 
-# Enable context-based indentation
-set smarttab
+" Set line numbers to gray
+highlight LineNr ctermfg=grey
 
 " Set the number of spaces that a tab character represents
 set tabstop=2       " Number of spaces a tab character occupies
