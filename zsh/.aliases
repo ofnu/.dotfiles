@@ -1,0 +1,6 @@
+# set CPU architecture
+alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+alias intel="env /usr/bin/arch -<architecture> /bin/zsh --login"
+
+# Replace old tools with newer alternatives (syntax-highlighting!)
+alias cat="bat --number"

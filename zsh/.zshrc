@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Import ALIASES
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -11,8 +16,10 @@ export PATH="/Users/pangea/.cargo/bin:$PATH"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+# THEME
 ZSH_THEME="gentoo"
-PS1='%n%# '
+PS1='%n%# ' # removes hostname from cmdline
 
 # SSH on Kitty patch
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
@@ -96,41 +103,6 @@ echo 'export MANPAGER="vim -M +MANPAGER"'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# set CPU architecture
-alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
-alias intel="env /usr/bin/arch -<architecture> /bin/zsh --login"
-
-# Replace old tools with newer alternatives (syntax-highlighting!)
-alias cat="bat --number"
-
-
-#### DEEELEEEEEETEEEEE MEEEEEE ##################
-alias knockknock="~/mediatoascii --video-path /Users/pangea/Videopix.mp4 --scale-down 3"
-alias cowboy="~/mediatoascii --video-path ./square.mp4 --scale-down 2.5 --font-size 6"
-################################################
-
-
 
 # RUBY settings
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
