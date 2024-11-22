@@ -9,7 +9,7 @@ i use mac btw
 ## setup
 clone it:
 ```bash
-git clone git@github.com:ofnu/dotfiles.git ~/.dotfiles
+git clone https://github.com/ofnu/dotfiles ~/.dotfiles
 ```
 
 stow it:
