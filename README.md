@@ -20,4 +20,4 @@ stow vim zsh tmux
 its that easy
 
 ## credit
-big thanks to stow
+shouts out to richard stallman
