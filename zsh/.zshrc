@@ -113,8 +113,6 @@ chruby ruby-3.1.3
 if [[ -d /Users/pangea/Applications/quarto/bin ]]; then
   export PATH="/Users/pangea/Applications/quarto/bin:$PATH"
 fi
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 export PATH=$PATH:/Users/pangea/.local/bin
 
 [ -f "/Users/pangea/.ghcup/env" ] && . "/Users/pangea/.ghcup/env" # ghcup-env
