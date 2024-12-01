@@ -6,7 +6,7 @@ i use mac btw
 - zsh setup
 - tmux conf
 
-## setup
+## usage
 clone it:
 ```bash
 git clone https://github.com/ofnu/dotfiles ~/.dotfiles
@@ -17,7 +17,3 @@ stow it:
 cd ~/.dotfiles
 stow vim zsh tmux
 ```
-its that easy
-
-## credit
-shouts out to richard stallman

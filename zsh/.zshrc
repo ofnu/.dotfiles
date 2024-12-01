@@ -24,6 +24,9 @@ PS1='%n%# ' # removes hostname from cmdline
 # SSH on Kitty patch
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
+# Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
