@@ -1,3 +1,7 @@
 .DS_Store
 *.swp
 *.log
+.config/*
+!.cofnig/kitty/
+!.config/raycast/
+!.config/bat.conf
