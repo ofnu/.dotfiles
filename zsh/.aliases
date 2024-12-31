@@ -5,4 +5,3 @@ alias intel="env /usr/bin/arch -<architecture> /bin/zsh --login"
 # my aliases
 alias cat="bat --number"
 alias pip=pip3
-alias 
