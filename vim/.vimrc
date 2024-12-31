@@ -1,3 +1,8 @@
+" Set Vim as MANPAGER
+autocmd FileType man setlocal nowrap
+autocmd FileType man setlocal spell
+autocmd FileType man nnoremap <buffer> q :quit<CR>
+
 " Disable the audible bell and set the visual bell to do nothing
 set visualbell t_vb=
 
