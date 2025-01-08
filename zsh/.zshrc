@@ -24,9 +24,6 @@ PS1='%n%# ' # removes hostname from cmdline
 # SSH on Kitty patch
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
-# Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -58,7 +55,7 @@ cmap w!! w !sudo tee > /dev/null %
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -102,7 +99,7 @@ source <(fzf --zsh)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-echo 'export MANPAGER="vim -M +MANPAGER"'
+export MANPAGER="col -bx | vim -c 'set ft=man nowrap' -"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -119,3 +116,4 @@ fi
 export PATH=$PATH:/Users/pangea/.local/bin
 
 [ -f "/Users/pangea/.ghcup/env" ] && . "/Users/pangea/.ghcup/env" # ghcup-env
+export PATH="/opt/homebrew/opt/e2fsprogs/sbin:$PATH"

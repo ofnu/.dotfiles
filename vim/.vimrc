@@ -1,7 +1,19 @@
+" Plug-ins
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-utils/vim-man'
+
+call plug#end()
+
 " Set Vim as MANPAGER
 autocmd FileType man setlocal nowrap
 autocmd FileType man setlocal spell
+autocmd FileType man setlocal colorcolumn=
 autocmd FileType man nnoremap <buffer> q :quit<CR>
+autocmd FileType man highlight manOption ctermfg=Yellow guifg=Yellow
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 " Disable the audible bell and set the visual bell to do nothing
 set visualbell t_vb=
