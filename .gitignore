@@ -1,6 +1,7 @@
 .DS_Store
 *.swp
 *.log
+aider.*
 .config/*
 !.cofnig/kitty/
 !.config/raycast/
