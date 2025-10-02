@@ -88,7 +88,12 @@ compinit
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-completions
+)
 
 # OMZ offers cool plugins
 source $ZSH/oh-my-zsh.sh
@@ -104,16 +109,3 @@ export MANPAGER="col -bx | vim -c 'set ft=man nowrap' -"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# RUBY settings
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
-
-# Add quarto to the path
-if [[ -d /Users/pangea/Applications/quarto/bin ]]; then
-  export PATH="/Users/pangea/Applications/quarto/bin:$PATH"
-fi
-export PATH=$PATH:/Users/pangea/.local/bin
-
-[ -f "/Users/pangea/.ghcup/env" ] && . "/Users/pangea/.ghcup/env" # ghcup-env
-export PATH="/opt/homebrew/opt/e2fsprogs/sbin:$PATH"
