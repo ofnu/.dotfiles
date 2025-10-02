@@ -3,5 +3,6 @@ alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
 alias intel="env /usr/bin/arch -<architecture> /bin/zsh --login"
 
 # my aliases
-alias cat="bat --number"
+alias cat="batcat --number"
 alias pip=pip3
+alias xclip="xclip -selection clipboard"
