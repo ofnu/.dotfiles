@@ -103,7 +103,7 @@ source <(fzf --zsh)
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# open MANPAGES with Vim 
 export MANPAGER="col -bx | vim -c 'set ft=man nowrap' -"
 
 # You may need to manually set your language environment
