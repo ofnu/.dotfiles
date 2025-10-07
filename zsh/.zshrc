@@ -105,6 +105,8 @@ source <(fzf --zsh)
 
 # open MANPAGES with Vim 
 export MANPAGER="col -bx | vim -c 'set ft=man nowrap' -"
+# this allows for :man in Vim
+export MANPATH="/usr/local/man:$MANPATH"
 
 # Highlight MANPAGES manually
 # export LESS_TERMCAP_mb=$'\e[1;32m'
