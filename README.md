@@ -15,5 +15,7 @@ git clone https://github.com/ofnu/dotfiles ~/.dotfiles
 stow it:
 ```bash
 cd ~/.dotfiles
-stow vim zsh tmux
+
+stow -t ~/.config config
+stow -t ~ vim zsh tmux
 ```

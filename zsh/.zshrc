@@ -88,7 +88,12 @@ compinit
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-completions
+)
 
 # OMZ offers cool plugins
 source $ZSH/oh-my-zsh.sh
@@ -98,22 +103,20 @@ source <(fzf --zsh)
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# open MANPAGES with Vim 
 export MANPAGER="col -bx | vim -c 'set ft=man nowrap' -"
+# this allows for :man in Vim
+export MANPATH="/usr/local/man:$MANPATH"
+
+# Highlight MANPAGES manually
+# export LESS_TERMCAP_mb=$'\e[1;32m'
+# export LESS_TERMCAP_md=$'\e[1;32m'
+# export LESS_TERMCAP_me=$'\e[0m'
+# export LESS_TERMCAP_se=$'\e[0m'
+# export LESS_TERMCAP_so=$'\e[01;33m'
+# export LESS_TERMCAP_ue=$'\e[0m'
+# export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# RUBY settings
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
-
-# Add quarto to the path
-if [[ -d /Users/pangea/Applications/quarto/bin ]]; then
-  export PATH="/Users/pangea/Applications/quarto/bin:$PATH"
-fi
-export PATH=$PATH:/Users/pangea/.local/bin
-
-[ -f "/Users/pangea/.ghcup/env" ] && . "/Users/pangea/.ghcup/env" # ghcup-env
-export PATH="/opt/homebrew/opt/e2fsprogs/sbin:$PATH"
